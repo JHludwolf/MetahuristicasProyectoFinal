@@ -1,9 +1,34 @@
 Optimización y Metahurísticas
 Proyeto Final
 
-José Miguel de la Mora Alvarado                     022
+Dr. Jonás Velasco Álvarez
+jvelascoa@up.edu.mx
+
+José Miguel de la Mora Alvarado                     0228034
 Samantha Licea Dominguez                            0224255
 José Luis Lobera del Castillo                       0224643
 Rafael Andrade Ruíz Capetillo                       0225854
 
+I. Instrucciones:
 
+El reporte y la presentación debe incluir la explicación de la respresentación de una solución,
+la evaluación de la función objetivo, y en su caso, el mecanismo de perturbación de las soluciones.
+Se debe realizar 50 ejecuciones independientes del algoritmo y explicar los resultados obtenidos.
+Incluir conclusiones finales de la actividad. Sea creativo. ¡Mucho éxito!.
+
+I. Problema 1 (Asignación de terminales):
+
+Se tienen n estaciones de trabajo y m hubs (terminales).
+El costo de asignar una estación de trabajo i a un hub j es cij.
+Cada estación de trabajo consume o demanda wi unidades de la capacidad de un hub.
+La capacidad de un hub j es uj.
+El objetivo es encontrar la asignación de mínimo costo para formar una red de conexiones entre estaciones de trabajo y terminales.
+Cada estación de trabajo debe ser asignada exactamente a una terminal (hub).
+El costo cij se calcula usando las coordenadas de las terminales (xj, yj) y las estaciones de trabajo (xi, yi) de la siguiente forma:
+
+cij = round(√(xi − xj)^2 + (yi − yj)^2)
+
+Generar 5 instancias de prueba adicionales con 100 terminales y 32 estaciones de trabajo.
+Las demandas de las estaciones de trabajo son generadas con valores aleatorios entre 10 y 15;
+las capacidades de las terminales son valores aleatorios entre 1 y 6.
+Las coordenadas x e y para las estaciones de trabajo y las terminales son valores aleatorios entre 1 y 100.
