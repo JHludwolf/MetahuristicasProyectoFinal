@@ -32,3 +32,67 @@ Generar 5 instancias de prueba adicionales con 100 terminales y 32 estaciones de
 Las demandas de las estaciones de trabajo son generadas con valores aleatorios entre 10 y 15;
 las capacidades de las terminales son valores aleatorios entre 1 y 6.
 Las coordenadas x e y para las estaciones de trabajo y las terminales son valores aleatorios entre 1 y 100.
+
+Notas:
+
+LECTURA DE INSTANCIAS
+
+100 Terminales
+32 Estaciones
+
+NUMERO DE TERMINAL - CAPACIDAD - POSX - POSY
+
+NUMERO DE ESTACION - DEMANDA - POSX - POSY
+
+PSEUDOCODIGO
+
+function distancia(x1, y1, x2, y2) return dist
+
+terminales [][] = [[numero, capacidad, posx, posy]]
+
+estaciones [][] = [[numero, demanda, posx, posy]]
+
+resultado = {}
+# numeroEstacion : [[Lista de terminales], [Distancia a Terminales]]
+
+'''
+1: [[a,b,c], [30,15,80]],
+2: [[d,e,f], [40,10,20]],
+3: [[g,h], [d1,d2]],
+'''
+
+function GRASP(terminales, estaciones):
+
+    # GREEDY
+
+    for estacion in estaciones:
+        contadorDemanda = 0
+        resultado[estacion[0]] = []
+
+        while contadorDemanda < estacion[1]:
+            
+            terminal = terminales.pop()
+            resulatdo[estacion[0]].append(terminal[0])
+            contadorDemanda += terminal[1]
+
+    # LOCAL SEARCH
+    Iterar en maquinas
+    Intentar cambiar dos terminales
+    Si el cambio es favorable, se queda
+    Sino repetimos (o pasamos)
+
+    return retultado
+
+
+function optimizar():
+    resultados = []
+    for _ in range(100):
+        resutados.append( GRASP(shuffle(terminales), shuffle(estaciones)) )
+
+
+    
+
+
+
+
+
