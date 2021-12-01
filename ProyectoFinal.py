@@ -139,6 +139,7 @@ for fileIdx in range(1,6):
 
     terminalesOriginal = [Terminal(terminal[0], terminal[1], terminal[2], terminal[3]) for terminal in terminalesLst]
     estacionesOriginal = [Estacion(estacion[0], estacion[1], estacion[2], estacion[3]) for estacion in estacionesLst]
+    
     algoritmo(terminalesOriginal, estacionesOriginal)
 
 
